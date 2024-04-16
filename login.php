@@ -6,6 +6,9 @@
     <title>Log in | PhotoSec</title>
 </head>
 <body>
+    <?php
+        include('./inludes/config.php');
+    ?>
     <h1>PhotoSec</h1>
     <h2>Sign In</h2>
     <form  action="/login.php" method="post">
