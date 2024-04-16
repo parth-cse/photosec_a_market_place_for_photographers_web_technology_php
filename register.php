@@ -20,6 +20,8 @@
         <input type="email" name="email" id="email" placeholder="Enter your Email">
         <input type="password" name="password" id="password" placeholder="Password">
         <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password">
-        <input type="submit" value="Log In">
+        <input type="submit" value="Register">
+    </form>
+    <p>Already registered <a href="#">Log in</a></p>
 </body>
 </html>

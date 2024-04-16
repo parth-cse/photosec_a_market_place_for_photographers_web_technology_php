@@ -19,5 +19,7 @@
         <input type="email" name="email" id="email" placeholder="Enter your Email">
         <input type="password" name="password" id="password" placeholder="Password">
         <input type="submit" value="Log In">
+    </form>
+    <p>New to our Platform <a href="#">Sign Up</a></p>
 </body>
 </html>
