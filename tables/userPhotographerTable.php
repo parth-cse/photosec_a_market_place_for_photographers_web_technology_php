@@ -6,6 +6,7 @@
         name VARCHAR(60) NOT NULL,
         email VARCHAR(100) NOT NULL UNIQUE,
         password VARCHAR(255) NOT NULL,
+        experience INTEGER,
         profile VARCHAR(255),
         photo1 VARCHAR(255),
         photo2 VARCHAR(255),
