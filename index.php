@@ -28,6 +28,13 @@
         <img src="./static/img/site/sanjay.jpg" alt="">
     </div>
 </section>
+<section id="pics">
+    <h2>Top Picks of the Week</h2>
+    <img src="./static/img/site/top pick.jpg" alt="">
+    <img src="./static/img/site/top pick.jpg" alt="">
+    <img src="./static/img/site/top pick.jpg" alt="">
+    <img src="./static/img/site/top pick.jpg" alt="">
+</section>
 <?php
     include('./includes/footer.php');
 ?>
