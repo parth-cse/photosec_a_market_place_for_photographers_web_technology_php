@@ -14,9 +14,9 @@
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )";
 
-        if ($conn->query($sql) === True){
-            echo "Table photographerUser created successfully";
-        }else{
-            echo "Error hai bhai dekh <br/>".$conn->error;
-        }
+    if ($conn->query($sql) === True){
+        echo "Table photographerUser created successfully";
+    }else{
+        echo "Error hai bhai dekh <br/>".$conn->error;
+    }
 ?>
