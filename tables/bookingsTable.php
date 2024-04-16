@@ -8,6 +8,8 @@
         photoGrapherName VARCHAR(60) NOT NULL,
         bookingDate DATE NOT NULL,
         numberOfDays INTEGER NOT NULL,
+        status VARCHAR(25) DEFAULT 'Pending' CHECK (status in ('Pending', 'Accepted','Rejected', 'Completed', 'Cancelled')),
+        location TEXT,
         bookAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )";
 
