@@ -10,6 +10,7 @@
         photo1 VARCHAR(255),
         photo2 VARCHAR(255),
         photo3 VARCHAR(255),
+        isVerified BOOL DEFAULT FALSE,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )";
 
