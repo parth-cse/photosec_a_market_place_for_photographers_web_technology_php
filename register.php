@@ -10,14 +10,16 @@
         include('./includes/config.php');
     ?>
     <h1>PhotoSec</h1>
-    <h2>Sign In</h2>
+    <h2>Sign up</h2>
     <form  action="/login.php" method="post">
         <input type="radio" id="client" name="user-type" value="client">
         <label for="client">Client</label>
         <input type="radio" id="photographer" name="user-type" value="Photographer">
         <label for="photographer">Photographer</label>
+        <input type="text" name="name" id="name" placeholder="Enter your Full Name">
         <input type="email" name="email" id="email" placeholder="Enter your Email">
         <input type="password" name="password" id="password" placeholder="Password">
+        <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password">
         <input type="submit" value="Log In">
 </body>
 </html>
