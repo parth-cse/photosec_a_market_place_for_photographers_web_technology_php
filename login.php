@@ -7,7 +7,6 @@
 </head>
 <body>
     <?php
-        session_start();
         include('./includes/config.php');
 
 
@@ -31,6 +30,7 @@
                     $_SESSION['loggedin'] = true;
                     $_SESSION['username'] = $row['name'];
                     $_SESSION['usertype'] = $type;
+                    $_SESSION['email'] = $row['email'];
                     
                     echo "<script>window.location='index.php';</script>";
                 }
