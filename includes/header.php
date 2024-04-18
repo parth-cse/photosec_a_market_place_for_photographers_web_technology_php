@@ -1,8 +1,5 @@
 <?php
     include('config.php');
-    session_start();
-    error_reporting(0);
-    $status = $_SESSION['loggedin'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
