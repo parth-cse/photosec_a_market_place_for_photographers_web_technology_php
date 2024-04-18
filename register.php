@@ -14,8 +14,8 @@
     $type = $_POST['user-type'];
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $cpassword = password_hash($_POST['cpassword'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
     if("$password == $cpassword"){
         if ($type === 'client') {
                 $select = "SELECT * FROM clientuser WHERE email = '$email'";
