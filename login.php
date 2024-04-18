@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+        session_start();
         include('./includes/config.php');
 
 
@@ -27,8 +28,13 @@
                 $row = $result->fetch_assoc();
             
                 if($password == $row['password']) {
-                    header('location:index.php');
-                } else {
+                    $_SESSION['loggedin'] = true;
+                    $_SESSION['username'] = $row['name'];
+                    $_SESSION['usertype'] = $type;
+                    
+                    echo "<script>window.location='index.php';</script>";
+                }
+                else {
                   echo "<script>alert('Invalid password);</script>";
                 }
               }else{

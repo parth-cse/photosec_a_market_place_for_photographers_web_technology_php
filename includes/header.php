@@ -16,7 +16,7 @@
         <a href="#">Photographers</a>
         <a href="#">Your Bookings</a>
         <a href="#">Log in</a>
-        <form action="/logout.php" method="post">
+        <form action="logout.php" method="post">
             <input type="submit" value="Log Out">
         </form>
     </nav>
