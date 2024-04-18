@@ -1,3 +1,9 @@
+<?php
+    include('config.php');
+    session_start();
+    error_reporting(0);
+    $status = $_SESSION['loggedin'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +21,16 @@
         <a href="#">ABOUT US</a>
         <a href="#">Photographers</a>
         <a href="#">Your Bookings</a>
+        <?php 
+            if($_SESSION['loggedin'] == false){
+                ?>
         <a href="#">Log in</a>
+        <?php
+            } else {
+                ?>
         <form action="logout.php" method="post">
             <input type="submit" value="Log Out">
         </form>
+        <?php
+            } ?>
     </nav>
