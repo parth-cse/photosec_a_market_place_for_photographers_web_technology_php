@@ -93,6 +93,30 @@ a{
     line-height: normal;
 }
 
+.red-btn{
+    color: #fff;
+    background-color: red;
+}
+
+
+.btn-secondary {
+    height: 50px;
+    width: 156px;
+    border-radius: 25px;
+    border: 5px solid #F4E079;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F4E079;
+    text-align: center;
+    font-family: "Quicksand";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
 #hero{
     height: 851px;
 }
@@ -271,8 +295,9 @@ footer ul, ul a{
     width: 325px;
 }
 
-.btn-primary:hover{
+.btn-primary:hover, .btn-secondary:hover{
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.532);
+    text-decoration: none;
 }
 
 a:hover{
@@ -307,4 +332,80 @@ a:hover{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.booking-details{
+    padding: 47px 196px;
+    height: 100%;
+}
+
+
+.booking-id{
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.booking-date{
+    color: #000;
+    text-align: center;
+    font-family: "Inria Serif";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.details img{
+    width: 448px;
+    height: 448px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.bookedPhotographer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+.details>div>div p{
+    color: #000;
+    font-family: Quicksand;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.details>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking-btn{
+    display: inline-flex;
+    gap: 10px;
+}
+
+.btn-border{
+    border: 0px;
+}
+
+#bookings hr{
+    margin-left: 107px;
+    margin-right: 107px;
+    border: #555 solid 2px;
+    border-radius: 50%;
 }
