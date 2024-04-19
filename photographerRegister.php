@@ -4,49 +4,33 @@
 
   $error_message = '';
   if ($_SERVER['REQUEST_METHOD'] == 'POST') { // If the form is submitted
-    $type = $_POST['user-type'];
+    $type = 'photographer';
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
-    if("$password == $cpassword"){
-        if ($type === 'client') {
-                $select = "SELECT * FROM clientuser WHERE email = '$email'";
-                $result = $conn->query($select);
+    if($password === $cpassword){
+      $select = "SELECT * FROM photographeruser WHERE email = '$email'";
+      $result = $conn->query($select);
 
-                if ($result->num_rows > 0) {
-                $error_message = "User Already exist please login";
-                } else {
-                    $sql = "INSERT INTO clientuser (name, email, password) VALUES ('$name', '$email', '$password')";
-                    if ($conn->query($sql) === TRUE) {
-                    echo "<script> alert('Register Successfull'); </script>";
-                    }else {
-                        echo "Error: " . $sql . "<br>" . $conn->error();
-                    }
-                }   
-        } elseif ($type === 'photographer'){
-                $select = "SELECT * FROM photographeruser WHERE email = '$email'";
-                $result = $conn->query($select);
-
-                if ($result->num_rows > 0) {
-                $error_message = "User Already exist please login";
-                } else {
-                    $sql = "INSERT INTO photographeruser (name, email, password) VALUES ('$name', '$email', '$password')";
-                    if ($conn->query($sql) === TRUE) {
-                    echo "<script> alert('Register Successfull'); </script>";
-                    }else {
-                        echo "Error: " . $sql . "<br>" . $conn->error();
-                    }
-                }   
+      if ($result->num_rows > 0) {
+          echo "<script>alert(User Already exist please login)</script>";
+      } else {
+        $sql = "INSERT INTO photographeruser (name, email, password) VALUES ('$name', '$email', '$password')";
+        if ($conn->query($sql) === TRUE) {
+          echo "<script>alert('Registered Successfully, Please Login and Complete Your Profile'); window.location='login.php';</script>";
+        }else {
+          echo "Error: " . $sql . "<br>" . $conn->error();
         }
+      }   
     }else{
-        echo "<script> alert('Password not same, Please Check') </script>";
+        echo "<script> alert('Password didnt match'); </script>";
     }
   }
 ?>
     <form  action="" method="post">
     <img class="mb-4" src="./static/img/site/logo/logo.png" alt="" height="57">
-    <h1 class="h3 mb-3 fw-normal">Register</h1>
+    <h1 class="h3 mb-3 fw-normal">Registration</h1>
 
     <div class="form-floating">
       <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" required>
