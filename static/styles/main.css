@@ -274,3 +274,7 @@ ul, ul a{
 .btn-primary:hover{
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.532);
 }
+
+a:hover{
+    text-decoration: underline;
+}

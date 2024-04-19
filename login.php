@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in | PhotoSec</title>
-</head>
-<body>
+
     <?php
         include('./includes/config.php');
+        include('./includes/header2.php');
 
 
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $type = $_POST['user-type'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             
@@ -42,17 +35,23 @@
               }
         }
     ?>
-    <h1>PhotoSec</h1>
-    <h2>Sign In</h2>
     <form  action="" method="post">
-        <input type="radio" id="client" name="user-type" value="client">
-        <label for="client">Client</label>
-        <input type="radio" id="photographer" name="user-type" value="Photographer">
-        <label for="photographer">Photographer</label>
-        <input type="email" name="email" id="email" placeholder="Enter your Email">
-        <input type="password" name="password" id="password" placeholder="Password">
-        <input type="submit" value="Log In">
-    </form>
-    <p>New to our Platform <a href="./register.php">Sign Up</a></p>
-</body>
-</html>
+    <img class="mb-4" src="./static/img/site/logo/logo.png" alt="" height="57">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-body-secondary">New to Photosec <a href="">Register</a></p>
+  </form>
+
+  <?php
+    include('./includes/footer2.php');
+    ?>

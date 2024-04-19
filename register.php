@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in | PhotoSec</title>
-</head>
-<body>
 <?php
   include('./includes/config.php');
+  include('./includes/header2.php');
 
   $error_message = '';
   if ($_SERVER['REQUEST_METHOD'] == 'POST') { // If the form is submitted
@@ -51,20 +44,32 @@
     }
   }
 ?>
+    <form  action="" method="post">
+    <img class="mb-4" src="./static/img/site/logo/logo.png" alt="" height="57">
+    <h1 class="h3 mb-3 fw-normal">Register</h1>
 
-    <h1>PhotoSec</h1>
-    <h2>Sign up</h2>
-    <form  action="register.php" method="post">
-        <input type="radio" id="client" name="user-type" value="client" required>
-        <label for="client">Client</label>
-        <input type="radio" id="photographer" name="user-type" value="photographer" required>
-        <label for="photographer">Photographer</label>
-        <input type="text" name="name" id="name" placeholder="Enter your Full Name" required>
-        <input type="email" name="email" id="email" placeholder="Enter your Email" required>
-        <input type="password" name="password" id="password" placeholder="Password" required>
-        <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" required>
-        <input type="submit" value="Register">
-    </form>
-    <p>Already registered <a href="./login.php">Log in</a></p>
-</body>
-</html>
+    <div class="form-floating">
+      <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" required>
+      <label for="floatingInput">Email address</label>
+    </div>
+    
+    <div class="form-floating">
+      <input type="text" class="form-control" name="name" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Enter Your Full Name</label>
+    </div>
+
+    <div class="form-floating pass" style="margin-bottom: 0px;">
+      <input type="password" class="form-control pass" name="password" id="floatingPassword" placeholder="Password" style="margin-bottom: 0px;">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" name="cpassword" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Confirm Password</label>
+    </div>
+    <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
+    <p class="mt-5 mb-3 text-body-secondary">Already registered <a href="">Log in</a></p>
+  </form>
+
+<?php
+    include('./includes/footer2.php');
+    ?>
