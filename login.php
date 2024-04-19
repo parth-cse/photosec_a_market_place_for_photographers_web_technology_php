@@ -18,7 +18,7 @@
             if ($type == 'client') {
                 $select = "SELECT * FROM clientuser WHERE email = '$email'";
                 $result = $conn->query($select);
-            } elseif ($type == 'photographer'){
+            } else{
                 $select = "SELECT * FROM photographeruser WHERE email = '$email'";
                 $result = $conn->query($select);
             }
@@ -29,7 +29,7 @@
                 if($password == $row['password']) {
                     $_SESSION['loggedin'] = true;
                     $_SESSION['username'] = $row['name'];
-                    $_SESSION['usertype'] = $type;
+                    $_SESSION['usertype'] = $_POST['user-type'];
                     $_SESSION['email'] = $row['email'];
                     
                     echo "<script>window.location='index.php';</script>";

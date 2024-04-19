@@ -6,28 +6,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>PhotoSecc</title>
+    <title>Photosec</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=DM+Serif+Text&family=IBM+Plex+Serif:wght@700&family=Open+Sans:wght@300..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/styles/main.css">
 </head>
 <body>
-    <h1>
-        PhotoSecc
-    </h1>
-    <nav>
-        <a href="#">HOME</a>
-        <a href="#">ABOUT US</a>
-        <a href="#">Photographers</a>
-        <a href="#">Your Bookings</a>
-        <?php 
-            if($_SESSION['loggedin'] == false){
-                ?>
-        <a href="#">Log in</a>
-        <?php
-            } else {
-                ?>
-        <form action="logout.php" method="post">
-            <input type="submit" value="Log Out">
-        </form>
-        <?php
-            } ?>
-    </nav>
+    <header id="header">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="./index.php"><img src="./static/img/site/logo/logo.png" alt="logo" id="logo"></a>
+            </div>
+            <div class="nav">
+                <a href="./index.php" class="nav-element">Home</a>
+                <a href="./about.php" class="nav-element">About Us</a>
+                <a href="./photographer.php" class="nav-element">Photographers</a>
+                <a href="./yourbookings.php" class="nav-element">Your Bookings</a>
+            </div>
+            <a href="" class="btn-primary"><span>Login</span></a>
+        </div>
+    </header>
+    <main>
