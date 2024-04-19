@@ -258,7 +258,7 @@ a{
     line-height: normal;
 }
 
-ul, ul a{
+footer ul, ul a{
     color: #FFF;
     font-family: "Quicksand";
     font-size: 20px;
@@ -277,4 +277,34 @@ ul, ul a{
 
 a:hover{
     text-decoration: underline;
+}
+
+.about{
+    padding: 100px 71px;
+    border: 1px  solid #000;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.about-content{
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-content img{
+    width: 539px;
+    height: 405px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.about-content h1{
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
