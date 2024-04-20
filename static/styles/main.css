@@ -371,7 +371,7 @@ a:hover{
     border-radius: 50%;
 }
 
-.bookedPhotographer{
+.bookedPhotographer, .bookedPhotographer-user{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -403,7 +403,7 @@ a:hover{
     border: 0px;
 }
 
-#bookings hr{
+#bookings hr , .user-hr{
     margin-left: 107px;
     margin-right: 107px;
     border: #555 solid 2px;
@@ -416,7 +416,7 @@ a:hover{
     display: flex;
 }
 
-.side-nav{
+.side-nav, .side-nav-profile{
     width: 400px;
     height:  825px;
     background-color: black;
@@ -585,3 +585,71 @@ form{
 .scroll-container::-webkit-scrollbar-button { 
     display: none; 
 } 
+
+#user-dashboard-page{
+    display: flex;
+}
+
+.profile-pic-gird>img{
+    width: 251px;
+    height: 251px;
+    object-fit: cover;
+    border-radius: 50%;
+    grid-area: 1/1/9/9;
+}
+
+
+.profile-pic-gird>a{
+    color: #F4E079;
+    grid-area: 1/7/3/9;
+}
+
+.profile-pic-gird{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.profile-flex{
+    padding: 51px 74.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-name{
+    color: #F4E079;
+    text-align: center;
+    font-family: "Inria Serif";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.side-nav-profile{
+    padding-bottom: 51px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booking-btn form{
+    margin: 0px;
+}
+
+.user-booking-details{
+    padding: 10px 100px 62px 100px;
+}
+
+.user-booking-date{
+    font-size: 25px;
+}
+
+
+.user-photographer-booking-details-class{
+    font-size: 30px;
+}
