@@ -4,7 +4,7 @@ body{
 }
 
 body::-webkit-scrollbar { 
-    width: 5px; 
+    width: 3px; 
 } 
 
 body::-webkit-scrollbar-track { 
@@ -12,11 +12,11 @@ body::-webkit-scrollbar-track {
 } 
 
 body::-webkit-scrollbar-thumb { 
-    background: #F4E079; 
+    background: #F4E07980; 
 } 
 
 body::-webkit-scrollbar-thumb:hover { 
-    background: #555; 
+    background: #F4E079; 
 } 
 
 body::-webkit-scrollbar-button { 
@@ -409,3 +409,179 @@ a:hover{
     border: #555 solid 2px;
     border-radius: 50%;
 }
+
+.sidebarwindow{
+    width: 400px;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.side-nav{
+    width: 400px;
+    height:  825px;
+    background-color: black;
+    
+}
+
+form{
+    margin: 51px 35px;
+}
+
+#search{
+    width: 330px;
+    height: 58px;
+    padding-left: 29px;
+    border-radius: 29px;
+
+}
+
+.search-bar{
+    display: grid;
+    grid-template-columns: 242px 88px;
+}
+
+.search-bar>button{
+    z-index: 1;
+    background-color: #ffffff00;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-nav hr{
+    border: 2px solid white;
+    margin: 16px 20px;
+}
+
+.filter{
+    padding: 0px 30px;
+}
+
+.filter-heading{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-heading>svg{
+    width: 41px;
+    color: #fff;
+}
+.filter-heading p {
+    color: #FFF;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0%;
+}
+
+.filter-head{
+    color: #FFF;
+    font-family: Quicksand;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.filtercheck{
+    color: #FFF;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+#photographers-section-page{
+    display: flex;
+    
+}
+
+.photographers-section__image{
+    width: 204px;
+    border-radius: 50%;
+}
+.photographer-card{
+    padding: 37px 28px 37px 42px;
+    
+}
+.photographer-identity{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.photographer-name>h2{
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.photographer-name p{
+    color: #000;
+    font-family: Quicksand;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.photographer-card-portfolio{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px;
+}
+
+.photographer-card-portfolio>img{
+    width: 257px;
+    height: 216.861px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.scroll-container{
+    width: 100%;
+}
+
+.link-to-profile{
+    display:flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.card-border{
+    border-bottom: 2px solid black;
+}
+
+.scroll-container { 
+    height: 825px; 
+    overflow-y: scroll; 
+} 
+
+.scroll-container::-webkit-scrollbar { 
+    width: 3px; 
+} 
+
+.scroll-container::-webkit-scrollbar-track { 
+    background: #f1f1f1; 
+} 
+
+.scroll-container::-webkit-scrollbar-thumb { 
+    background: #F4E07980; 
+} 
+
+.scroll-container::-webkit-scrollbar-thumb:hover { 
+    background: #F4E079; 
+} 
+
+.scroll-container::-webkit-scrollbar-button { 
+    display: none; 
+} 
