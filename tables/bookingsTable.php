@@ -10,7 +10,10 @@
         numberOfDays INTEGER NOT NULL,
         status VARCHAR(25) DEFAULT 'Pending' CHECK (status in ('Pending', 'Accepted','Rejected', 'Completed', 'Cancelled')),
         location TEXT,
-        bookAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        bookAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        shoottype VARCHAR(60),
+        shootvenue  VARCHAR(255),
+        contact VARCHAR(30)
         )";
 
         if ($conn->query($sql) === True){

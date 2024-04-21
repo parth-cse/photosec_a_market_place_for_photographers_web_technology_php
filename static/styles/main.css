@@ -680,7 +680,7 @@ form{
     padding-left: 20px;
     flex-shrink: 0;
     border-radius: 10px;
-    color: #D9D9D9;
+    
     font-family: Quicksand;
     font-size: 24px;
     font-style: normal;
@@ -755,4 +755,18 @@ form{
     height: 100%;
     object-fit: scale-down;
     background-color: #F4E07980;
+}
+
+.form-input{
+    color:#000
+}
+
+.a{
+    border: none;
+    background-color: transparent;
+    color: rgb(13 110 253);
+}
+
+.a:hover{
+    text-decoration: underline;
 }

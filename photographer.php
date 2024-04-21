@@ -98,7 +98,7 @@
                             <img src="./static/img/site/p5.jpg" alt="">
                             <img src="./static/img/site/slider-img2.jpg" alt="">
                         </div>
-                        <p class="link-to-profile"><a href="">View Profile</a></p>
+                        <form action="photographer-profile.php" method="post" class="link-to-profile"><input type="checkbox" name="link" id="1" value="" hidden><button type="submit" class="a" name="email" value="">View Profile</button></form>
                     </div>
                     
                 </div>

@@ -17,19 +17,19 @@
                 <div>
                     <form action="booking-request.php" method="post">
                         <div>
-                            <input type="date" id="date" placeholder="Date" class="form-input-date" required><br />
+                            <input type="date" name="date" id="date" placeholder="Date" class="form-input-date" required><br />
                         </div>
                         <div>
-                            <input type="text" id="venue" class="form-input" placeholder="Shoot Venue" required><br />
+                            <input type="text" name="venue" id="venue" class="form-input" placeholder="Shoot Venue" required><br />
                         </div>
                         <div>
-                            <input type="text" id="type" class="form-input" placeholder="Shoot Type" required><br />
+                            <input type="text" name="type" id="type" class="form-input" placeholder="Shoot Type" required><br />
                         </div>
                         <div>
-                            <input type="text" id="type" class="form-input" placeholder="Shoot Type" required><br />
+                            <input type="text" name="days" id="days" class="form-input" placeholder="No. of Days" required><br />
                         </div>
                         <div>
-                            <input type="text" id="contact" class="form-input" placeholder="Contact Details" required><br />
+                            <input type="number" name="contact" id="contact" class="form-input" placeholder="Contact Details" required><br />
                         </div>
                         <div>
                             <button type="submit" class="btn-primary" style="border: none;">Submit</button>
