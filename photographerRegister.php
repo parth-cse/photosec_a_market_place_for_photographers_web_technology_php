@@ -18,7 +18,7 @@
       } else {
         $sql = "INSERT INTO photographeruser (name, email, password) VALUES ('$name', '$email', '$password')";
         if ($conn->query($sql) === TRUE) {
-          echo "<script>alert('Registered Successfully, Please Login and Complete Your Profile'); window.location='login.php';</script>";
+          echo "<script>alert('Registered Successfully, Please Login and Complete Your Profile'); window.location='photographerLogin.php';</script>";
         }else {
           echo "Error: " . $sql . "<br>" . $conn->error();
         }

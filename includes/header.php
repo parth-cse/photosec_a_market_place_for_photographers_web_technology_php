@@ -27,7 +27,7 @@
                 <a href="./photographer.php" class="nav-element">Photographers</a>
                 <a href="./yourbookings.php" class="nav-element">Your Bookings</a>
             </div>
-            <a href="" class="btn-primary"><span>Login</span></a>
+            <a href="login.php" class="btn-primary"><span>Login</span></a>
         </div>
     </header>
     <main>

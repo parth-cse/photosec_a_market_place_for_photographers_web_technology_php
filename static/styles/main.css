@@ -504,6 +504,7 @@ form{
 
 .photographers-section__image{
     width: 204px;
+    height: 204px;
     border-radius: 50%;
 }
 .photographer-card{

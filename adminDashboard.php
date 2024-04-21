@@ -7,8 +7,11 @@
     if($_SESSION['loggedin'] === true){
 
     }else{
-        echo "<script>alert('Please log in first'); window.location= 'login.php';</script>"; 
+        echo "<script>alert('Please log in first'); window.location= 'adminlogin.php';</script>"; 
     }
+
+    $sql =  "SELECT * FROM photographeruser WHERE isVerified='1'";
+    $result = $conn->query($sql);
     
 ?>
 
@@ -49,45 +52,33 @@
             </div>
 
             <div class="scroll-container">
+            <?php if($result->num_rows > 0){ while($row = $result->fetch_assoc()){?>
             <div class="card-border">
                     <div class="photographer-card">
                         <div class="photographer-identity">
-                            <img src="./static/img/site/sanjay.jpg" alt="" class="photographers-section__image">
+                            <img src="<?php echo "".$row['profile']; ?>" alt="" class="photographers-section__image">
                             <div class="photographer-name">
-                                <h2>Sanjay Jadhav</h2>
-                                <p>Years of Experience: NA</p>
+                                <h2><?php echo "".$row['name']; ?></h2>
+                                <p>Years of Experience: <?php echo "".$row['experience']; ?></p>
                             </div>
                         </div>
                         <div class="photographer-card-portfolio">
-                            <img src="./static/img/site/p2.jpg" alt="">
-                            <img src="./static/img/site/p3.jpg" alt="">
-                            <img src="./static/img/site/p5.jpg" alt="">
-                            <img src="./static/img/site/slider-img2.jpg" alt="">
+                            <img src="<?php echo "".$row['photo1']; ?>" alt="">
+                            <img src="<?php echo "".$row['photo2']; ?>" alt="">
+                            <img src="<?php echo "".$row['photo3']; ?>" alt="">
+                            <img src="<?php echo "".$row['photo1']; ?>" alt="">
                         </div>
-                        <form action="cancel-booking.php" style="margin: 0px; margin-top: 50px">
-                            <input type="hidden" name="id_to_delete" value=""> 
-                            <button type="submit" id="cancelBtn" class="btn-primary" style="background-color: red; border: none; color: white;">Cancel</button>
+                        <form action="pgremove.php" style="margin: 0px; margin-top: 50px">
+                            <input type="hidden" name="id_to_cancel" value="<?php echo "".$row['email']; ?>"> 
+                            <button type="submit" id="cancelBtn" class="btn-primary" style="background-color: red; border: none; color: white;">Remove</button>
                         </form>
                     </div>
                     
-                </div>
-                <div class="booking">
-                <div class="booking-details user-booking-details">
-                    
-                    <div class="details">
-                        <div>
-                            <p class="booking-id user-booking-id" style="font-size: 45px;">Booking Id: XXX</p>
-                            <div><p class="user-photographer-booking-details-class">Booking for: YYYY/MM/DD<br><br>
-                            No of Days: aa<br><br>
-                            Name of Photographer: abc<br><br>
-                            Booking Status: Accepted</p></div>
-                        </div>
-                        <div class="bookedPhotographer">
-                            <p class="booking-date user-booking-date">Date: YYYY/MM/DD</p>
-                            <a href=""><img style="width: 350px; height: 350px;" src="./static/img/site/sanjay.jpg" alt=""></a>
-                        </div>
-                    </div>
-                </div></div>
+                </div><?php }} else { ?>
+                    <div class="photographer-name">
+                                <h2 style="text-align: center; margin-top: 50px">No Photographer Approved</h2>
+                            </div> <?php } ?>
+                
             </div>
         </section>
 

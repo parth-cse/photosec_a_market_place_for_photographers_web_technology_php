@@ -13,7 +13,7 @@
                     $_SESSION['username'] = 'Parth Jamkhedkar';
                     $_SESSION['email'] = $email;
                     
-                    echo "<script>alert('Logged in successfully')</script>";
+                    echo "<script>alert('Logged in successfully'); window.location='adminDashboard.php';</script>";
                 }
             else {
                   echo "<script>alert('Invalid email or password);</script>";
