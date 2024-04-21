@@ -1,7 +1,19 @@
 <?php
-    include("./includes/header.php");
-    ?>
+    /*if($_SESSION['loggedin'] == false){
+        header("Location: login.php");
+    }*/
+    
+    include('./includes/header.php');
+    if($_SESSION['loggedin'] === true){
 
+    }else{
+        echo "<script>alert('Please log in first'); window.location= 'adminlogin.php';</script>"; 
+    }
+
+    $sql =  "SELECT * FROM photographeruser WHERE isVerified='1'";
+    $result = $conn->query($sql);
+    
+?>
 <section id="photographers-section-page">
             <div class="sidebarwindow">
             <div class="side-nav">
@@ -64,44 +76,30 @@
             </div>
 
             <div class="scroll-container">
+            <?php if($result->num_rows > 0){ while($row = $result->fetch_assoc()){?>
                 <div class="card-border">
                     <div class="photographer-card">
                         <div class="photographer-identity">
-                            <img src="./static/img/site/sanjay.jpg" alt="" class="photographers-section__image">
+                        <img src="<?php echo "".$row['profile']; ?>" alt="" class="photographers-section__image">
                             <div class="photographer-name">
-                                <h2>Sanjay Jadhav</h2>
-                                <p>Years of Experience: NA</p>
+                                <h2><?php echo "".$row['name']; ?></h2>
+                                <p>Years of Experience: <?php echo "".$row['experience']; ?></p>
                             </div>
                         </div>
                         <div class="photographer-card-portfolio">
-                            <img src="./static/img/site/p2.jpg" alt="">
-                            <img src="./static/img/site/p3.jpg" alt="">
-                            <img src="./static/img/site/p5.jpg" alt="">
-                            <img src="./static/img/site/slider-img2.jpg" alt="">
+                            <img src="<?php echo "".$row['photo1']; ?>" alt="">
+                            <img src="<?php echo "".$row['photo2']; ?>" alt="">
+                            <img src="<?php echo "".$row['photo3']; ?>" alt="">
+                            <img src="<?php echo "".$row['photo1']; ?>" alt="">
                         </div>
-                        <p class="link-to-profile"><a href="">View Profile</a></p>
+                        <form action="photographer-porfile.php" class="link-to-profile"><button type="submit" class="a" name="slug" value="<?php echo "".$row['email']; ?>">View Profile</button></form>
                     </div>
-                    
+                    </div><?php }} else { ?>
+                    <div class="photographer-name">
+                                <h2 style="text-align: center; margin-top: 50px">No Photographer Approved</h2>
+                            </div> <?php } ?>
                 </div>
-                <div class="card-border">
-                    <div class="photographer-card">
-                        <div class="photographer-identity">
-                            <img src="./static/img/site/sanjay.jpg" alt="" class="photographers-section__image">
-                            <div class="photographer-name">
-                                <h2>Sanjay Jadhav</h2>
-                                <p>Years of Experience: NA</p>
-                            </div>
-                        </div>
-                        <div class="photographer-card-portfolio">
-                            <img src="./static/img/site/p2.jpg" alt="">
-                            <img src="./static/img/site/p3.jpg" alt="">
-                            <img src="./static/img/site/p5.jpg" alt="">
-                            <img src="./static/img/site/slider-img2.jpg" alt="">
-                        </div>
-                        <form action="photographer-profile.php" method="post" class="link-to-profile"><input type="checkbox" name="link" id="1" value="" hidden><button type="submit" class="a" name="email" value="">View Profile</button></form>
-                    </div>
-                    
-                </div>
+                
             </div>
         </section>
 

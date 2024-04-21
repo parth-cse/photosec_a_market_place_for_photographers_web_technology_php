@@ -1,16 +1,22 @@
 <?php
     include('./includes/header.php');
+    $apemail = $_GET['slug'];
+    if($apemail != NULL){
+        $sql = "SELECT * FROM photographeruser WHERE email = '$apemail'";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+    }
 ?>
  <section id="photographer-profile">
             <div class="sidebarwindow photo-sidebarwindow">
                 <div class="side-nav-profile Photographer-sidebar">
                     <div class="profile-flex">
                         <div class="profile-pic-gird photographer-profile-pic">
-                            <img src="./static/img/site/sanjay.jpg" alt="">
+                            <img src="<?php echo "".$row['profile']; ?>" alt="">
                         </div>
 
                     <div class="photographer-experience">
-                        <p>Experience: AA Years</p>
+                        <p>Experience: <?php echo "".$row['experience']; ?> Years</p>
                         <p>No. of Successful Orders: AA</p>
                     </div>
                 </div>   
@@ -44,14 +50,14 @@
             <div class="scroll-container1">
                 <div class="portfolio">
                     <div class="portfolio-title">
-                        <h2>Sanjay Jadhav's Portfolio</h2>
+                        <h2><?php echo "".$row['name']; ?>'s Portfolio</h2>
                         <div></div>
                     </div>
                     <div class="portfolio-photos">
-                        <img src="./static/img/site/p2.jpg" alt="">
-                        <img src="./static/img/site/p3.jpg" alt="">
-                        <img src="./static/img/site/p5.jpg" alt="">
-                        <img src="./static/img/site/about-img2.jpg" alt="">
+                        <img src="<?php echo "".$row['photo1']; ?>" alt="">
+                        <img src="<?php echo "".$row['photo2']; ?>" alt="">
+                        <img src="<?php echo "".$row['photo3']; ?>" alt="">
+                        <img src="<?php echo "".$row['photo1']; ?>" alt="">
                     </div>    
                 </div>
             </div>
