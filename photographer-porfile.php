@@ -21,7 +21,7 @@
                     </div>
                 </div>   
                 <div>
-                    <form action="booking-request.php" method="post">
+                    <form action="booking-request.php">
                         <div>
                             <input type="date" name="date" id="date" placeholder="Date" class="form-input-date" required><br />
                         </div>
@@ -38,7 +38,7 @@
                             <input type="number" name="contact" id="contact" class="form-input" placeholder="Contact Details" required><br />
                         </div>
                         <div>
-                            <button type="submit" class="btn-primary" style="border: none;">Submit</button>
+                            <button type="submit" name="photographer" value="<?php echo "".$apemail ?>" class="btn-primary" style="border: none;">Submit</button>
                         </div>
                     </form>
                 </div>
