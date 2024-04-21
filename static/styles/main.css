@@ -796,3 +796,9 @@ form{
 .scroll-container1::-webkit-scrollbar-button { 
     display: none; 
 } 
+
+.header-profile-icon{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}

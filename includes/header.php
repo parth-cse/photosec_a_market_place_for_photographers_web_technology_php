@@ -1,5 +1,32 @@
 <?php
     include('config.php');
+    if($_SESSION['loggedin'] === true){
+        if($_SESSION['usertype'] == 'admin'){
+            $img_url = "./static/img/site/default.jpg";
+            $url = './adminDashboard.php';
+        }else if($_SESSION['usertype'] == 'photographer'){
+            $imgsql = "SELECT profile FROM photographeruser WHERE email='".$_SESSION["email"]."'";
+            $imgresult = $conn-> query( $imgsql );
+            $imgrow = $imgresult -> fetch_assoc();
+            if($imgrow['profile'] == NULL){
+                $img_url = './static/img/site/default.jpg';
+            }
+            else {
+                $img_url = $imgrow['profile'];
+            }
+            $url = './photoGrapherDashboard.php';
+        }else{
+            $imgsql = "SELECT profile FROM clientuser WHERE email='".$_SESSION["email"]."'";
+            $imgresult = $conn -> query( $imgsql );
+            $imgrow = $imgresult -> fetch_assoc();
+            if($imgrow['profile'] == NULL){
+                $img_url = './static/img/site/default.jpg';
+            }
+            else {
+                $img_url = $imgrow['profile'];
+            }
+            $url = './userdashboard.php';
+        }}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +54,13 @@
                 <a href="./photographer.php" class="nav-element">Photographers</a>
                 <a href="./yourbookings.php" class="nav-element">Your Bookings</a>
             </div>
+            <?php if($_SESSION['loggedin'] != true) { ?>
             <a href="login.php" class="btn-primary"><span>Login</span></a>
+            <?php }else{ ?>
+                <a href="<?php echo "".$url; ?>" ><span><img src="<?php echo "".$img_url ?>" class="header-profile-icon" style="width: 50px;
+    height: 50px;
+    border-radius: 50%;" alt=""></span></a>
+                <?php } ?>
         </div>
     </header>
     <main>
