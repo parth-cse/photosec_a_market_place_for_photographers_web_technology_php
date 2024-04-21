@@ -4,11 +4,6 @@
     }*/
     
     include('./includes/header.php');
-    if($_SESSION['loggedin'] === true){
-
-    }else{
-        echo "<script>alert('Please log in first'); window.location= 'adminlogin.php';</script>"; 
-    }
 
     $sql =  "SELECT * FROM photographeruser WHERE isVerified='1'";
     $result = $conn->query($sql);
@@ -96,7 +91,7 @@
                     </div>
                     </div><?php }} else { ?>
                     <div class="photographer-name">
-                                <h2 style="text-align: center; margin-top: 50px">No Photographer Approved</h2>
+                                <h2 style="text-align: center; margin-top: 50px">No Photographer Avaiable</h2>
                             </div> <?php } ?>
                 </div>
                 

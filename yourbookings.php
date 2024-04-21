@@ -33,7 +33,7 @@
                         </div>
                         <div  class="bookedPhotographer">
                             <p class="booking-date">Date: <?php echo "".$row['bookAt'] ?></p>
-                            <a href="./photographer-porfile.php?slug=<?php echo"".$pgrow['email'] ?>"><img src="<?php echo "".$pgrow['profile'] ?>" alt=""></a>
+                            <a href="./photographer-porfile.php?slug=<?php echo"".$pgrow['email']; ?>"><img src="<?php echo "".$pgrow['profile'] ?>" alt=""></a>
                         </div>
                     </div>
                     <div class="booking-btn">
