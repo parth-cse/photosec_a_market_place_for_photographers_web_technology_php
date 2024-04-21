@@ -562,7 +562,7 @@ form{
 }
 
 .scroll-container { 
-    height: 825px; 
+    height: 1450px; 
     overflow-y: scroll; 
 } 
 
@@ -586,7 +586,7 @@ form{
     display: none; 
 } 
 
-#user-dashboard-page{
+#user-dashboard-page, #photographer-profile{
     display: flex;
 }
 
@@ -652,4 +652,107 @@ form{
 
 .user-photographer-booking-details-class{
     font-size: 30px;
+}
+
+.Photographer-sidebar{
+    height: 1450px;
+    width: 550px;
+}
+
+.form-input-date{
+    width: 368px;
+    height: 64px;
+    padding-left: 20px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    color: #D9D9D9;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    margin-bottom: 30px;
+}
+
+.form-input{
+    width: 368px;
+    height: 74px;
+    padding-left: 20px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    color: #D9D9D9;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.photographer-profile-pic img{
+    width: 400px;
+    height: 400px;
+}
+
+.photographer-profile-pic{
+    padding-top: 50px;
+}
+
+.photographer-experience{
+    margin-top: 100px;
+    color: #F4E079;
+    font-family: Quicksand;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+
+.photo-sidebarwindow{
+    width: 550px;
+}
+
+.portfolio-title{
+    height: 239px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.portfolio-title h2{
+    color: #F4E079;
+    text-align: center;
+    font-family: "IBM Plex Serif";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.portfolio-title div{
+    background-color: #000;
+    width: 264px;
+    height: 1.5px;
+}
+
+.portfolio{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.portfolio-photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 218px;
+    gap: 50px 30px;
+}
+
+.portfolio-photos img{
+    width: 257px;
+    height: 100%;
+    object-fit: scale-down;
+    background-color: #F4E07980;
 }
