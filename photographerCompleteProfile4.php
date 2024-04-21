@@ -14,13 +14,13 @@ if(isset($_POST["submit"])) {
 
     $sample1_name = $_FILES['sample1'];
 
-    $sql = "UPDATE photographeruser SET photo2 = ? WHERE email = ?";
+    $sql = "UPDATE photographeruser SET photo4 = ? WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $profile_folder, $email);
 
     if ($stmt->execute()) {
         if (move_uploaded_file($profile_tmpname, $profile_folder)) {
-            echo "<script>alert(\"Upload Successful\"); window.location='photographerCompleteProfile4.php';</script>";
+            echo "<script>alert(\"Upload Successful\"); window.location='./pendingAccess.php'</script>";
         } else {
             echo "<script>alert(\"Error moving uploaded file\");</script>";
         }
@@ -33,7 +33,7 @@ if(isset($_POST["submit"])) {
 <form action="" method="post" enctype="multipart/form-data">
     <img class="mb-4" src="./static/img/site/logo/logo.png" alt="" height="57">
     <h1 class="h3 mb-3 fw-normal">Complete Your Profile</h1>
-    <h1 class="h5 mb-3 fw-normal">Step 3: Upload Sample Photo 2</h1>
+    <h1 class="h5 mb-3 fw-normal">Step 4: Upload Sample Photo 3</h1>
     
     <div class="profile-upload">
         <label for="profile-file" id="profile-label">
@@ -41,7 +41,7 @@ if(isset($_POST["submit"])) {
                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
                 <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
             </svg><br>
-            <p>Sample Image 2</p>
+            <p>Sample Image 3</p>
         </label>
         <input type="file" id="profile-file" name="profile" accept="image/x-png, image/jpeg" style="display: none;">
         <div id="profile-preview" class="preview"></div>
