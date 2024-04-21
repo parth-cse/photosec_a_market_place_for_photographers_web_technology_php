@@ -562,7 +562,7 @@ form{
 }
 
 .scroll-container { 
-    height: 1450px; 
+    height: 825px; 
     overflow-y: scroll; 
 } 
 
@@ -770,3 +770,28 @@ form{
 .a:hover{
     text-decoration: underline;
 }
+
+.scroll-container1 { 
+    height: 1450px; 
+    overflow-y: scroll; 
+} 
+
+.scroll-container1::-webkit-scrollbar { 
+    width: 3px; 
+} 
+
+.scroll-container1::-webkit-scrollbar-track { 
+    background: #f1f1f1; 
+} 
+
+.scroll-container1::-webkit-scrollbar-thumb { 
+    background: #F4E07980; 
+} 
+
+.scroll-container1::-webkit-scrollbar-thumb:hover { 
+    background: #F4E079; 
+} 
+
+.scroll-container1::-webkit-scrollbar-button { 
+    display: none; 
+} 

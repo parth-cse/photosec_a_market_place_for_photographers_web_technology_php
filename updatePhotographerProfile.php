@@ -14,13 +14,13 @@ if(isset($_POST["submit"])) {
 
     $sample1_name = $_FILES['sample1'];
 
-    $sql = "UPDATE clientuser SET profile = ? WHERE email = ?";
+    $sql = "UPDATE photographeruser SET profile = ? WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $profile_folder, $email);
 
     if ($stmt->execute()) {
         if (move_uploaded_file($profile_tmpname, $profile_folder)) {
-            echo "<script>alert(\"Upload Successful\"); window.location='userdashboard.php';</script>";
+            echo "<script>alert(\"Upload Successful\"); window.location='photoGrapherDashboard.php';</script>";
         } else {
             echo "<script>alert(\"Error moving uploaded file\");</script>";
         }

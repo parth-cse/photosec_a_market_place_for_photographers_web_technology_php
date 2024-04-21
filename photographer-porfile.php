@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="scroll-container">
+            <div class="scroll-container1">
                 <div class="portfolio">
                     <div class="portfolio-title">
                         <h2>Sanjay Jadhav's Portfolio</h2>
