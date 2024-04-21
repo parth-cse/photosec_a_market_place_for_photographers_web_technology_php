@@ -4,7 +4,7 @@ body {
 }
 
 .form-signin {
-  max-width: 330px;
+  max-width: 600px;
   padding: 1rem;
 }
 
@@ -35,4 +35,48 @@ body {
     margin-bottom: 0px; 
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+#profile-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#profile-label p{
+  color: #000;
+  font-family: "Quicksand";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.preview {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.preview img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-upload{
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }

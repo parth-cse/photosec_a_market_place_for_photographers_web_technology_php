@@ -17,18 +17,25 @@
                 $_SESSION['username'] = $row['name'];
                 $_SESSION['usertype'] = 'photographer';
                 $_SESSION['email'] = $row['email'];
+                $_SESSION['photo3'] = $row['photo3'];
                   
-                echo "<script>alert('Log in Successfull'); window.location='photographerDashboard.php';</script>";
-            }
-            else {
-              echo "<script>alert('Invalid email id or password);</script>";
-            }
+                echo "<script>alert('Log in Successfull')</script>";
+                if($row['isVerified'] === 0){
+                  echo "<script> window.location= \"photoGrapherDashboard.php\" </script>";
+                }else{
+                    echo "<script>window.location=\"pendingAccess.php \";</script>";
+                  }
+                
+          }else {
+            echo "<script>alert('Invalid email id or password);</script>";
           }
-      }
+      }else {
+        echo "<script>alert('Invalid email id or password);</script>";
+      }}
     ?>
     <form  action="" method="post">
     <img class="mb-4" src="./static/img/site/logo/logo.png" alt="" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">PG sign in</h1>
 
     <div class="form-floating">
       <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" required>

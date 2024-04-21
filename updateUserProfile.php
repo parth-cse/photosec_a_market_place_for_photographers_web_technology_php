@@ -2,7 +2,7 @@
 include("./includes/config.php");
 include("./includes/header2.php");
 if($_SESSION['loggedin'] != true){
-    echo "<script> alert(\"Please login first!\"); window.location = \"photographerLogin.php\"; </script>";
+    echo "<script> alert(\"Please login first!\"); window.location = \"login.php\"; </script>";
 }
 
 $email = $_SESSION['email'];
@@ -14,7 +14,7 @@ if(isset($_POST["submit"])) {
 
     $sample1_name = $_FILES['sample1'];
 
-    $sql = "UPDATE photographeruser SET profile = ? WHERE email = ?";
+    $sql = "UPDATE clientuser SET profile = ? WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $profile_folder, $email);
 

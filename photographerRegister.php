@@ -30,7 +30,7 @@
 ?>
     <form  action="" method="post">
     <img class="mb-4" src="./static/img/site/logo/logo.png" alt="" height="57">
-    <h1 class="h3 mb-3 fw-normal">Registration</h1>
+    <h1 class="h3 mb-3 fw-normal">PG Registration</h1>
 
     <div class="form-floating">
       <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" required>
@@ -38,16 +38,16 @@
     </div>
     
     <div class="form-floating">
-      <input type="text" class="form-control" name="name" id="floatingInput" placeholder="name@example.com">
+      <input type="text" class="form-control" name="name" id="floatingInput" placeholder="Your Name" required>
       <label for="floatingInput">Enter Your Full Name</label>
     </div>
 
     <div class="form-floating pass" style="margin-bottom: 0px;">
-      <input type="password" class="form-control pass" name="password" id="floatingPassword" placeholder="Password" style="margin-bottom: 0px;">
+      <input type="password" class="form-control pass" name="password" id="floatingPassword" placeholder="Password" style="margin-bottom: 0px;" required>
       <label for="floatingPassword">Password</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" name="cpassword" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" name="cpassword" id="floatingPassword" placeholder="CPassword" required>
       <label for="floatingPassword">Confirm Password</label>
     </div>
     <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
