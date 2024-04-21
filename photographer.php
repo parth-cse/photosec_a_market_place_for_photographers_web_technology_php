@@ -63,7 +63,7 @@
             </div>
             </div>
 
-            <div class="scroll-container1">
+            <div class="scroll-container">
                 <div class="card-border">
                     <div class="photographer-card">
                         <div class="photographer-identity">
