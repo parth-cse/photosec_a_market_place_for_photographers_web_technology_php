@@ -13,7 +13,9 @@ $email = $_SESSION['email'];
     <img class="mb-4" src="./static/img/site/logo/logo.png" alt="" height="57">
     <h1 class="h3 mb-3 fw-normal">All Done, Your Profile is Send for Review...</h1>
     <br><br>
-    <a href="photographerCompleteProfile.php" class="btn btn-primary w-100 py-2">Complete Your Profile</a>
+    <a href="photographerCompleteProfile.php" class="btn btn-primary w-100 py-2">Update Your Profile</a>
+    
+    <p class="mt-5 mb-3 text-body-secondary"><a href="./logout.php">Log out</a></p>
 </form>
 
 <?php
