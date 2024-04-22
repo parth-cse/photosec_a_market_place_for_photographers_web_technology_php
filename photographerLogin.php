@@ -20,11 +20,27 @@
                 $_SESSION['photo3'] = $row['photo3'];
                   
                 echo "<script>alert('Log in Successfull')</script>";
-                if($row['isVerified'] === 0){
+                if($row['isVerified'] == 1){
                   echo "<script> window.location= \"photoGrapherDashboard.php\" </script>";
                 }else{
-                    echo "<script>window.location=\"pendingAccess.php \";</script>";
+                  if($row['profile']==NULL){
+                    echo "<script>window.location=\"photographerCompleteProfile.php \";</script>";
                   }
+                  else if($row['photo1'] == NULL){
+                    echo "<script>window.location=\"photographerCompleteProfile1.php \";</script>";
+                  }
+                  else if($row['photo2'] == NULL){
+                    echo "<script>window.location=\"photographerCompleteProfile2.php \";</script>";
+                  }
+                  else if($row['photo3'] == NULL){
+                    echo "<script>window.location=\"photographerCompleteProfile3.php \";</script>";
+                  }
+                  else if($row['photo4'] == NULL){
+                    echo "<script>window.location=\"photographerCompleteProfile4.php \";</script>";
+                  }
+                  else{
+                    echo "<script>window.location=\"pendingAccess.php \";</script>";
+                  }}
                 
           }else {
             echo "<script>alert('Invalid email id or password);</script>";

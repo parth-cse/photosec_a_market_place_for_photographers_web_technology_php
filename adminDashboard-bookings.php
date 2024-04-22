@@ -26,20 +26,20 @@
                 <div class="booking">
                     <div class="booking-details user-booking-details" style="padding-bottom: 20px">
                         
-                        <div class="details">
-                            <div>
+                        <div class="details" style=" gap: 40px">
+                            <div style="flex: 1">
                                 <p class="booking-id user-booking-id" style="font-size: 45px;">Booking Id: <?php echo "".$row['id']; ?></p><br>
                                 <div><p class="user-photographer-booking-details-class"><?php echo "".$row['bookingDate']; ?><br><br>
                                 No of Days: <?php echo "".$row['numberOfDays']; ?><br><br>
-                                Name of User: abc<br><br>
+                                Name of User: <?php echo "".$row['clientName']; ?><br><br>
                                 Contact Details: <?php echo "".$row['contact']; ?></p></div>
                             </div>
-                            <div class="bookedPhotographer">
+                            <div class="bookedPhotographer" style="flex: 1">
                                 <p class="booking-date user-booking-date">Date: <?php echo "".$row['bookAt'] ?></p>
                                 <div><p class="user-photographer-booking-details-class">Shoot Type: <?php echo "".$row['shoottype'] ?><br><br>
                                 Venue: <?php echo "".$row['shootvenue'] ?><br><br>
-                                Photographer Email: NA<br><br>
-                                Status: <span style="color: #F4E079"><?php echo "".$row['status'] ?></span></p></div>
+                                Photographer Email: <?php echo "".$row['photoGrapherEmail']; ?> <br><br>
+                                Status: <span style="color: #F4E079"><?php echo "".$row['status']; ?></span></p></div>
                             </div>
                         </div>
                     </div>
