@@ -39,8 +39,7 @@
                             <li><a href="./photoGrapherDashboard-pending.php">Pending Requests</a></li><br>
                             <li><a href="./photoGrapherDashboard-complete.php">Completed Requests</a></li><br>
                             <li><a href="./photoGrapherDashboard-reject.php">Rejected Requests</a></li><br>
-                            <li><a href="./photoGrapherDashboard-cancel.php">Cancelled</a></li><br>
-                            <li><a href="#">Upload Photos</a></li>
+                            <li><a href="./photoGrapherDashboard-cancel.php">Cancelled</a></li>
                         </ul>
                     </div>
                 </div>   
@@ -55,7 +54,7 @@
             </div>
 
             <?php 
-                $bsql = "SELECT * FROM  bookings WHERE photoGrapherEmail='".$_SESSION['email']."' AND status='Accepted' ORDER BY bookAt DESC";
+                $bsql = "SELECT * FROM  bookings WHERE photoGrapherEmail='".$_SESSION['email']."' AND status='Rejected' ORDER BY bookAt DESC";
                 $res1 = $conn->query($bsql);
                 ?>
             <div class="scroll-container">
@@ -76,14 +75,11 @@
                                 <div><p class="user-photographer-booking-details-class">Shoot Type: <?php echo "".$brow['shoottype']; ?><br><br>
                                 Venue: <?php echo "".$brow['shootvenue']; ?> <br><br>
                                 Client Email: <?php echo"".$brow['clientEmail']; ?> <br><br>
-                                Status: <span style="color: #F4E079;"><?php echo "".$brow['status']; ?></span></p></div>
+                                Status: <span style="color: red;"><?php echo "".$brow['status']; ?></span></p></div>
                             </div>
                         </div>
-                        <form action="reject-booking.php" style="margin: 0px; margin-top: 50px"> 
-                            <button type="submit" name="cancel" value="<?php echo "".$brow['id']; ?>" id="cancelBtn" class="btn-primary" style="background-color: red; border: none; color: white;">Cancel</button>
-                        </form>
                     </div>
-                    <hr class="user-hr"/><?php }}else{ ?><p class="booking-id user-booking-id" style="font-size: 45px;padding: 50px; text-align: center">No Accepted Requests</p><?php } ?>
+                    <hr class="user-hr"/><?php }}else{ ?><p class="booking-id user-booking-id" style="font-size: 45px;padding: 50px; text-align: center">No Rejected Requests</p><?php } ?>
                 </div>
             </div>
         </section>
