@@ -36,7 +36,7 @@
                             <img src="<?php echo "".$row['photo1']; ?>" alt="">
                             <img src="<?php echo "".$row['photo2']; ?>" alt="">
                             <img src="<?php echo "".$row['photo3']; ?>" alt="">
-                            <img src="<?php echo "".$row['photo1']; ?>" alt="">
+                            <img src="<?php echo "".$row['photo4']; ?>" alt="">
                         </div>
                         <form action="pgremove.php" style="margin: 0px; margin-top: 50px">
                             <button type="submit" name="id_to_cancel" id="cancelBtn" value="<?php echo "".$row['email']; ?>" class="btn-primary" style="background-color: red; border: none; color: white;">Remove</button>

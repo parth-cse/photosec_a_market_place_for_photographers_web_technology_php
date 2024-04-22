@@ -45,7 +45,7 @@
                             <img src="<?php echo "".$row['photo1']; ?>" alt="">
                             <img src="<?php echo "".$row['photo2']; ?>" alt="">
                             <img src="<?php echo "".$row['photo3']; ?>" alt="">
-                            <img src="<?php echo "".$row['photo1']; ?>" alt="">
+                            <img src="<?php echo "".$row['photo4']; ?>" alt="">
                         </div>
                         <form action="pgapprove.php" style="margin: 0px;">
                             <button type="submit" name="email_to_approve" value="<?php echo "".$row['email']; ?>" id="approveBtn" class="btn-primary" style="background-color: green; border: none; color: white;">Approve</button>

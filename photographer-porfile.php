@@ -57,7 +57,7 @@
                         <img src="<?php echo "".$row['photo1']; ?>" alt="">
                         <img src="<?php echo "".$row['photo2']; ?>" alt="">
                         <img src="<?php echo "".$row['photo3']; ?>" alt="">
-                        <img src="<?php echo "".$row['photo1']; ?>" alt="">
+                        <img src="<?php echo "".$row['photo4']; ?>" alt="">
                     </div>    
                 </div>
             </div>

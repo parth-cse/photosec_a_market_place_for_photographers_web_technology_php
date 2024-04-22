@@ -85,7 +85,7 @@
                             <img src="<?php echo "".$row['photo1']; ?>" alt="">
                             <img src="<?php echo "".$row['photo2']; ?>" alt="">
                             <img src="<?php echo "".$row['photo3']; ?>" alt="">
-                            <img src="<?php echo "".$row['photo1']; ?>" alt="">
+                            <img src="<?php echo "".$row['photo4']; ?>" alt="">
                         </div>
                         <form action="photographer-porfile.php" class="link-to-profile"><button type="submit" class="a" name="slug" value="<?php echo "".$row['email']; ?>">View Profile</button></form>
                     </div>
