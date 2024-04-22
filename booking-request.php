@@ -9,7 +9,7 @@
     $clientemail = $_SESSION['email'];
     $email = $_GET['photographer'];
     if($_SESSION['loggedin'] == false){
-        echo "<script>alert(\"Log in to proceed with booking request\"); window.location = 'yourbookings.php'; </script>";
+        echo "<script>alert(\"Log in to proceed with booking request\"); window.history.back()'; </script>";
     }
     else{
         $sql = "INSERT INTO `bookings`(`clientName`, `clientEmail`, `photoGrapherEmail`, `bookingDate`, `numberOfDays`, `shoottype`, `shootvenue`, `contact`) VALUES ('$nameclient','$clientemail','$email','$date','$days','$type','$venue','$contact')";

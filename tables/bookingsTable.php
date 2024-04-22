@@ -4,7 +4,7 @@
     $sql = "CREATE  TABLE if not exists bookings(
         id INTEGER PRIMARY KEY AUTO_INCREMENT ,
         clientName VARCHAR(60) NOT NULL,
-        clientEmail VARCHAR(100) NOT NULL UNIQUE,
+        clientEmail VARCHAR(100) NOT NULL,
         photoGrapherEmail VARCHAR(60) NOT NULL,
         bookingDate DATE NOT NULL,
         numberOfDays INTEGER NOT NULL,
