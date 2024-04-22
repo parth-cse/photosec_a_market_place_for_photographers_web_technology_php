@@ -506,6 +506,8 @@ form{
     width: 204px;
     height: 204px;
     border-radius: 50%;
+    object-fit: cover;
+    
 }
 .photographer-card{
     padding: 37px 28px 37px 42px;
@@ -803,3 +805,6 @@ form{
     border-radius: 50%;
 }
 
+img{
+    object-fit: cover;
+}

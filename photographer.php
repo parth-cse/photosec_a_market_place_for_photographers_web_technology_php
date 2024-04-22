@@ -75,7 +75,7 @@
                 <div class="card-border">
                     <div class="photographer-card">
                         <div class="photographer-identity">
-                        <img src="<?php echo "".$row['profile']; ?>" alt="" class="photographers-section__image">
+                        <img src="<?php echo "".$row['profile']; ?>" alt="" style="object-fit: cover" class="photographers-section__image">
                             <div class="photographer-name">
                                 <h2><?php echo "".$row['name']; ?></h2>
                                 <p>Years of Experience: <?php echo "".$row['experience']; ?></p>
