@@ -17,7 +17,9 @@
 
                     <div class="photographer-experience">
                         <p>Experience: <?php echo "".$row['experience']; ?> Years</p>
-                        <p>No. of Successful Orders: AA</p>
+                        <?php $bsqlr2 = "SELECT * FROM bookings WHERE photoGrapherEmail = '".$row['email']."'";
+                            $bres2 = $conn->query($bsqlr2) ; ?>
+                        <p>No. of Successful Orders: <?php echo "".$bres2 -> num_rows; ?></p>
                     </div>
                 </div>   
                 <div>

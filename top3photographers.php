@@ -10,22 +10,14 @@
             $rank3 = $_POST['rank3'];
           
           $update = "Update toprank SET rank1 = '$rank1', rank2='$rank2', rank3='$rank3' WHERE id =1";  //updating the database with
-          $result = $conn->query($select);
-          if($result->num_rows == 1){
-              $row = $result->fetch_assoc();
-              if($password == $row['password']) {
-                $_SESSION['loggedin'] = true;
-                $_SESSION['username'] = $row['name'];
-                $_SESSION['usertype'] = 'client';
-                $_SESSION['email'] = $row['email'];
-                  
-                echo "<script>alert('Log in Successfull'); window.location='userdashboard.php';</script>";
+          if($conn->query($update)){
+                echo "<script>alert('Top 3 Photographer Updated'); window.location='index.php';</script>";
             }
             else {
               echo "<script>alert('Invalid email id or password);</script>";
             }
           }
-      }
+      
     ?>
     <form  action="" method="post">
     <img class="mb-4" src="./static/img/site/logo/logo.png" alt="" height="57">
@@ -44,11 +36,10 @@
     <div class="form-floating">
       <input type="email" class="form-control" name="rank3" id="floatingInput" placeholder="name@example.com" required>
       <label for="floatingInput">Rank 3</label>
-    </div>
+    </div><br>
 
     <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-body-secondary">New to Photosec <a href="./register.php">Register</a></p>
-    <p class="mt-5 mb-3 text-body-secondary">Photographer Login: <a href="./photographerLogin.php">Click here</a></p>
+    <p class="mt-5 mb-3 text-body-secondary"><a href="./adminDashboard.php">Go Back</a></p>
     </form>
 
   <?php
