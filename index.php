@@ -45,13 +45,16 @@
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active" data-bs-interval="2000">
-                        <img src="./static/img/site/p2.jpg" class="d-block w-100 slider-img" alt="...">
+                        <img src="./static/img/upload/top1.jpg" class="d-block w-100 slider-img" alt="...">
                       </div>
                       <div class="carousel-item" data-bs-interval="2000">
-                        <img src="./static/img/site/p3.jpg" class="d-block w-100 slider-img" alt="...">
+                        <img src="./static/img/upload/top2.jpg" class="d-block w-100 slider-img" alt="...">
                       </div>
                       <div class="carousel-item" data-bs-interval="2000"data-bs-interval="2000">
-                        <img src="./static/img/site/p5.jpg" class="d-block w-100 slider-img" alt="...">
+                        <img src="./static/img/upload/top3.jpg" class="d-block w-100 slider-img" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000"data-bs-interval="2000">
+                        <img src="./static/img/upload/top4.jpg" class="d-block w-100 slider-img" alt="...">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">

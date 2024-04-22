@@ -15,6 +15,8 @@
                             <li><a href="./adminDashboard.php">Approved Users</a></li><br>
                             <li><a href="./adminDashboard-pending.php">Pending Requests</a></li><br>
                             <li><a href="./adminDashboard-bookings.php">Booking Requests</a></li><br>
+                            <li><a href="./topimg1.php">Top Pics</a></li><br>
+                            <li><a href="./top3photographers.php">Top Photographers</a></li><br>
                         </ul>
                     </div>
                 </div>   
