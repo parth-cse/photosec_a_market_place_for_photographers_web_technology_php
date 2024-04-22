@@ -1,2 +1,2 @@
 .gitignore
-./statc/img/upload/*.jpg
+statc/img/upload/*.jpg
