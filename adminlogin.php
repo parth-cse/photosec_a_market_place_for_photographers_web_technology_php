@@ -12,6 +12,7 @@
                     $_SESSION['loggedin'] = true;
                     $_SESSION['username'] = 'Parth Jamkhedkar';
                     $_SESSION['email'] = $email;
+                    $_SESSION['usertype'] = 'admin';
                     
                     echo "<script>alert('Logged in successfully'); window.location='adminDashboard.php';</script>";
                 }
