@@ -8,5 +8,5 @@
         die("Connection failed: " . $conn->connect_error); 
     } 
     session_start();
-    // error_reporting(0);
+        error_reporting(0);
     ?>
