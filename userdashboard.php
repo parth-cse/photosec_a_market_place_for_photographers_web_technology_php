@@ -10,14 +10,14 @@
         echo "<script>alert('Please log in first'); window.location= 'login.php';</script>"; 
     }
     
-    $sql = "SELECT * FROM clientuser WHERE email='". $_SESSION["email"]."'";
-    $result = $conn->query( $sql );
-    $row = $result->fetch_assoc();
-    if($row['profile'] == NULL){
+    $sql1 = "SELECT * FROM clientuser WHERE email='". $_SESSION["email"]."'";
+    $result1 = $conn->query( $sql1 );
+    $row1 = $result1->fetch_assoc();
+    if($row1['profile'] == NULL){
         $img_url = './static/img/site/default.jpg';
     }
     else{
-        $img_url = $row['profile'];
+        $img_url = $row1['profile'];
     }
 ?>
 
@@ -35,7 +35,7 @@
                     </div>
                     <div>
                         <p class="profile-name">
-                            <?php echo "".$row['name']; ?>
+                            <?php echo "".$row1['name']; ?>
                         </p>
                     </div>
                 </div>   
@@ -53,26 +53,27 @@
                 
                 <div class="booking">
                     <?php
-                        $sql1 = "SELECT * FROM bookings WHERE clientEmail='$email'";
-                        $result1 = $conn->query($sql1);
-                        if($result1->num_rows>0) { while($row1 = $result-> fetch_assoc()){ ?>
+                        $email = $_SESSION[ 'email' ];
+                        $sql = "SELECT * FROM bookings WHERE clientEmail='$email'";
+                        $result = $conn->query($sql);
+                        if($result->num_rows>0) { while($row = $result-> fetch_assoc()){ ?>
                     <div class="booking-details user-booking-details">
                         
                         <div class="details">
                             <div>
-                                <p class="booking-id user-booking-id" style="font-size: 45px;">Booking Id: <?php echo "".$row1['id']; ?></p>
-                                <div><p class="user-photographer-booking-details-class">Booking for: <?php echo "".$row1['bookingDate']; ?><br><br>
-                                No of Days: <?php echo "".$row1['numberOfDays']; ?><br><br>
-                                <?php $pgemail = $row1["photoGrapherEmail"];
+                                <p class="booking-id user-booking-id" style="font-size: 45px;">Booking Id: <?php echo "".$row['id']; ?></p>
+                                <div><p class="user-photographer-booking-details-class">Booking for: <?php echo "".$row['bookingDate']; ?><br><br>
+                                No of Days: <?php echo "".$row['numberOfDays']; ?><br><br>
+                                <?php $pgemail = $row["photoGrapherEmail"];
                             $pgnameSQL = "SELECT * FROM photographeruser WHERE email='$pgemail'";
                             $pgresult = $conn -> query( $pgnameSQL );
                             $pgrow = $pgresult -> fetch_assoc();
                             ?>
                                 Name of Photographer: <?php echo "".$pgrow['name']; ?><br><br>
-                                Booking Status: <span style="color:#F4E079"><?php echo"".$row1['status']; ?></span></p></div>
+                                Booking Status: <span style="color:#F4E079"><?php echo"".$row['status']; ?></span></p></div>
                             </div>
                             <div class="bookedPhotographer">
-                                <p class="booking-date user-booking-date">Date: <?php echo "".$row1['bookAt'] ?></p>
+                                <p class="booking-date user-booking-date">Date: <?php echo "".$row['bookAt'] ?></p>
                                 <a href="./photographer-porfile.php?slug=<?php echo"".$pgrow['email']; ?> "><img style="width: 350px; height: 350px;" src="<?php echo "".$pgrow['profile'] ?>" alt=""></a>
                             </div>
                         </div>

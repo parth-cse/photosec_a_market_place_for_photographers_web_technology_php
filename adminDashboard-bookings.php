@@ -9,6 +9,9 @@
     }else{
         echo "<script>alert('Please log in first'); window.location= 'login.php';</script>"; 
     }
+
+    $sql = "SELECT * FROM bookings";
+    $result = $conn->query($sql);
     
 ?>
 
@@ -19,48 +22,32 @@
             </div>
 
             <div class="scroll-container">
+            <?php if($result->num_rows>0) { while($row = $result-> fetch_assoc()){ ?>
                 <div class="booking">
                     <div class="booking-details user-booking-details" style="padding-bottom: 20px">
                         
                         <div class="details">
                             <div>
-                                <p class="booking-id user-booking-id" style="font-size: 45px;">Booking Id: XXX</p><br>
-                                <div><p class="user-photographer-booking-details-class">Booking for: YYYY/MM/DD<br><br>
-                                No of Days: aa<br><br>
+                                <p class="booking-id user-booking-id" style="font-size: 45px;">Booking Id: <?php echo "".$row['id']; ?></p><br>
+                                <div><p class="user-photographer-booking-details-class"><?php echo "".$row['bookingDate']; ?><br><br>
+                                No of Days: <?php echo "".$row['numberOfDays']; ?><br><br>
                                 Name of User: abc<br><br>
-                                Contact Details: </p></div>
+                                Contact Details: <?php echo "".$row['contact']; ?></p></div>
                             </div>
                             <div class="bookedPhotographer">
-                                <p class="booking-date user-booking-date">Date: YYYY/MM/DD</p>
-                                <div><p class="user-photographer-booking-details-class">Shoot Type:<br><br>
-                                Venue: aa<br><br>
-                                Additional Requests: NA<br><br>
-                                Status: </p></div>
+                                <p class="booking-date user-booking-date">Date: <?php echo "".$row['bookAt'] ?></p>
+                                <div><p class="user-photographer-booking-details-class">Shoot Type: <?php echo "".$row['shoottype'] ?><br><br>
+                                Venue: <?php echo "".$row['shootvenue'] ?><br><br>
+                                Photographer Email: NA<br><br>
+                                Status: <span style="color: #F4E079"><?php echo "".$row['status'] ?></span></p></div>
                             </div>
                         </div>
-                        <form action="cancel-booking.php" style="margin: 0px; margin-top: 50px">
-                            <input type="hidden" name="id_to_delete" value=""> 
-                            <button type="submit" id="cancelBtn" class="btn-primary" style="background-color: red; border: none; color: white;">Cancel</button>
-                        </form>
                     </div>
                 <hr class="user-hr"/>
-                <div class="booking">
-                <div class="booking-details user-booking-details">
-                    
-                    <div class="details">
-                        <div>
-                            <p class="booking-id user-booking-id" style="font-size: 45px;">Booking Id: XXX</p>
-                            <div><p class="user-photographer-booking-details-class">Booking for: YYYY/MM/DD<br><br>
-                            No of Days: aa<br><br>
-                            Name of Photographer: abc<br><br>
-                            Booking Status: Accepted</p></div>
-                        </div>
-                        <div class="bookedPhotographer">
-                            <p class="booking-date user-booking-date">Date: YYYY/MM/DD</p>
-                            <a href=""><img style="width: 350px; height: 350px;" src="./static/img/site/sanjay.jpg" alt=""></a>
-                        </div>
-                    </div>
-                </div></div>
+                <?php  }} else { ?>
+                <div class="photographer-name">
+                                <h2 style="text-align: center; margin-top: 50px">No Booking Made</h2>
+                            </div> <?php } ?>
             </div>
         </section>
 

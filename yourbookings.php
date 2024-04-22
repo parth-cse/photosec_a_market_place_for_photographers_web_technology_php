@@ -13,7 +13,7 @@
     $result = $conn->query($sql);
     
 ?>
-<section id="bookings">
+<section id="bookings" >
     <?php if($result->num_rows>0) { while($row = $result-> fetch_assoc()){ ?>
             <div class="booking">
                 <div class="booking-details">
@@ -46,7 +46,7 @@
             </div>
             <hr /><?php  }} else { ?>
                 <div class="photographer-name">
-                                <h2 style="text-align: center; margin-top: 50px">Make your First Booking Requests <a href="photographer.php">click here</a></h2>
+                                <h2 style="text-align: center; margin: 50px;">Make your First Booking Requests <a href="photographer.php">click here</a></h2>
                             </div> <?php } ?>
             
         </section>

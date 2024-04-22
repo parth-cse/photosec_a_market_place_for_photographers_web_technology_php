@@ -11,7 +11,7 @@ $email = $_SESSION['email'];
 if(isset($_POST["submit"])) {
     $profile_name = $_FILES['profile']['name'];
     $profile_tmpname = $_FILES['profile']['tmp_name'];
-    $profile_folder = './static/img/upload/' . $profile_name;
+    $profile_folder = './static/img/upload/'.date('Y-m-d')."-". $profile_name;
 
     $sample1_name = $_FILES['sample1'];
 

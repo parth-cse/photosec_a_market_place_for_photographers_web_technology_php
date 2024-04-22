@@ -14,7 +14,7 @@
     else{
         $sql = "INSERT INTO `bookings`(`clientName`, `clientEmail`, `photoGrapherEmail`, `bookingDate`, `numberOfDays`, `shoottype`, `shootvenue`, `contact`) VALUES ('$nameclient','$clientemail','$email','$date','$days','$type','$venue','$contact')";
         if($conn->query($sql)){
-            echo "<script>alert(\"Booking Request Send\"); window.history.back() </script>";
+            echo "<script>alert(\"Booking Request Send\"); window.location = 'yourbookings.php' </script>";
         }
         else{
             echo "<script>alert(\"404\"); window.history.back() </script>";
