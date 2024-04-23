@@ -28,7 +28,7 @@ This section will be filled in once you have a deployment process in place. Here
 3. ***Configuration:*** 
     * In Xammp Control Panel start Apache Server and MySQL
     * Confirm the MySQL port is 3306
-    * If it's not 3306 then change the $servername="127.0.0.1:<your port no>"; in "includes/config.php" and "includes/db_creation.php"
+    * If it's not 3306 then change the $servername="127.0.0.1:<"your port no">"; in "includes/config.php" and "includes/db_creation.php"
 4. ***Running the Application:***
     
     * Open A Web Browser
