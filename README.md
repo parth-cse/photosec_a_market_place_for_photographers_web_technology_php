@@ -17,34 +17,34 @@ This section will be filled in once you have a deployment process in place. Here
 
 1. ***Prerequisites:*** 
     
-    * Xampp Control Panel
-    * Apache Server
-    * phpMyAdmin
-    * MySQL
+    * `Xampp Control Panel`
+    * `Apache Server`
+    * `phpMyAdmin`
+    * `MySQL`
 2. ***Installation:*** 
-    * Install Xampp
-    * Create a Directory in htdocs directory of Xammp
+    * Install `Xampp`
+    * Create a Directory in `htdocs` directory of `Xammp`
     * Clone the Repository in that Directory
 3. ***Configuration:*** 
-    * In Xammp Control Panel start Apache Server and MySQL
-    * Confirm the MySQL port is 3306
-    * If it's not 3306 then change the $servername="127.0.0.1:<"your port no">"; in "includes/config.php" and "includes/db_creation.php"
+    * In `Xammp Control Panel` start `Apache Server` and `MySQL`
+    * Confirm the `MySQL` port is `3306`
+    * If it's not `3306` then change the `$servername="127.0.0.1:<"your port no">"` in `includes/config.php` and `includes/db_creation.php`
 4. ***Running the Application:***
     
     * Open A Web Browser
-    * Go to URL http://localhost/your_directory_name_in_htdocs/includes/db_creation.php
-    * Then go to URL http://localhost/your_directory_name_in_htdocs"/tables/bookings.php
+    * Go to URL `http://localhost/<your_directory_name_in_htdocs>/includes/db_creation.php`
+    * Then go to URL `http://localhost/<your_directory_name_in_htdocs>/tables/bookings.php`
     * Repeat for all the files in tables directory
-    * Now you are all set and with the project Go to URL http://localhost/your_directory_name_in_htdocs/index.php and explore the Photosec Web app 
-    * Login Credentials for Admin of the website is EMAIL: admin@photosec.in and PASSWORD: 12345
+    * Now you are all set and with the project Go to URL `http://localhost/<your_directory_name_in_htdocs>/index.php` and explore the Photosec Web app 
+    * Login Credentials for Admin of the website is EMAIL: `admin@photosec.in` and PASSWORD: `12345`
 
 **Authors**
 
-1.  *Parth Jamkhedkar*
+1.  *[@parth-cse](https://www.github.com/parth-cse)*
 
 **License**
 
-*Licensed under the MIT License*
+![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 
 
 
