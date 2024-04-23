@@ -18,8 +18,8 @@
                     <li><a href="./index.php">Home</a></li>
                     <li><a href="./about.php">About</a></li>
                     <li><a href="./photographer.php">Photographers</a></li>
-                    <li><a href="./404.html">Desclaimer</a></li>
-                    <li><a href="./404.html">Privacy Policy</a></li>
+                    <li><a href="./404.php">Desclaimer</a></li>
+                    <li><a href="./404.php">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="socials">
